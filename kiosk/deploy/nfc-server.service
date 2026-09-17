@@ -1,0 +1,28 @@
+[Unit]
+Description=Dasibom Kiosk NFC Reader Server (PN532)
+Documentation=https://kiosk-nine-sable.vercel.app
+After=network.target
+
+# 부팅 직후 SPI 장치가 아직 안 올라왔을 때를 대비:
+# 60초 안에 5번까지는 재시작을 허용하고, 그 이상이면 포기
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=__USER__
+WorkingDirectory=__WORKDIR__
+ExecStart=__PYTHON__ __WORKDIR__/nfc_server.py
+
+# print() 출력이 버퍼에 갇히지 않고 journalctl에 바로 찍히도록
+Environment=PYTHONUNBUFFERED=1
+
+# 리더기 오류 등으로 죽어도 5초 뒤 자동 재시작
+Restart=always
+RestartSec=5
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
