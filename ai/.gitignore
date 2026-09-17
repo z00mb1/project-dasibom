@@ -1,0 +1,51 @@
+# ===== 모델 가중치 (용량·라이선스) =====
+weights/*
+!weights/.gitkeep
+*.pt
+*.pth
+*.dat
+*.onnx
+*.ckpt
+
+# ===== 외부 라이브러리 (클론/pip으로 설치) =====
+SAM/*
+!SAM/.gitkeep
+CodeFormer/
+gfpgan/
+
+# ===== 데이터셋 · 얼굴 이미지 (개인정보·라이선스) =====
+data/
+*.jpg
+*.jpeg
+*.png
+*.JPG
+*.JPEG
+*.PNG
+*.jfif
+*.heic
+
+# ===== 실험 결과 · 임시 =====
+output/
+eye_diag/
+anton/
+alpha_sweep/
+family_child_blend/
+family_rescue/
+cf_in_*.png
+
+# ===== 파이썬 =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ===== 환경 · 비밀정보 =====
+.env
+*.env
+config_local.py
+
+# ===== IDE · OS =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
