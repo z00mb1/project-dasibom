@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1039243571508",
+    "project_id": "dasibom-auth",
+    "storage_bucket": "dasibom-auth.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039243571508:android:6e63376a66383c2ac23561",
+        "android_client_info": {
+          "package_name": "com.example.dasibom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYKYymWtawsb-xBzfMxqgXSNq7H4yjzO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
